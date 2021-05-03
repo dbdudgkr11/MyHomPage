@@ -1,0 +1,168 @@
+:root {
+  --main_img_bar_heigth: 300px;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Nanum Pen Script";
+  margin: 0;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 30;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(255, 5, 142);
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+
+#top {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 100;
+}
+
+h3 {
+  list-style: none;
+  margin-left: 100px;
+}
+
+h3 i {
+  font-size: 30px;
+  color: darkgray;
+}
+
+#menu_bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu_bar li {
+  list-style: none;
+}
+
+#menu_bar li a {
+  margin-left: 20px;
+  font-weight: 100;
+  color: black;
+}
+
+#menu_bar li a:hover {
+  color: black;
+}
+
+#top_menu {
+  margin-right: 100px;
+  display: flex;
+}
+
+#top_menu li {
+  list-style: none;
+}
+
+/* 슬라이드 컨테이너 */
+.slideBox {
+  background-color: rgb(255, 253, 253);
+  position: relative;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  margin: 15px auto;
+}
+
+.slide_image_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_image_box .animated {
+  -webkit-transition: left 0.3 ease-in;
+  transition: left 0.3s ease-in;
+}
+
+.slide_image_box a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+}
+
+.slide_nav a {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("../img/sprites.png") no-repeat;
+  text-indent: -9999em;
+}
+
+.slide_nav a.prev {
+  background-position: 0 -20px;
+  margin-left: -200px;
+}
+
+.slide_nav a.next {
+  background-position: -80px -20px;
+  margin-left: 165px;
+}
+
+.slide_nav a.disabled {
+  display: none;
+}
+
+/* 하단 푸터 */
+#footer_content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  background: lightblue;
+}
+#footer_logo {
+  top: 30px;
+  left: 50px;
+  font-size: 16px;
+}
+#footer_logo span {
+  color: yellow;
+}
+#download {
+  list-style: none;
+  top: 20px;
+  left: 400px;
+}
+#author {
+  list-style: none;
+  top: 20px;
+  left: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.kojun {
+  background: lightblue;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
