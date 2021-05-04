@@ -3,6 +3,7 @@
     include_once $_SERVER['DOCUMENT_ROOT']."/MyHomPage/db/db_connect.php";
     include_once $_SERVER['DOCUMENT_ROOT']."/MyHomPage/db/create_table.php";
     create_table($con,'members');
+    create_table($con, 'delete_members');  // 회원 탈퇴 테이블
     //입력된 데이터 패턴 체크
     $id = input_set($_POST["id"]);
     $pass = input_set($_POST["pass"]);
@@ -14,7 +15,7 @@
     $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
 
     $pattern = "/[가-힣]+/";
-    if(preg_match($pattern,$name)){
+    if(!preg_match($pattern,$name)){
         alert_back($name."형식에 맞지 않음");
         exit;
     }

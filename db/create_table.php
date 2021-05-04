@@ -133,7 +133,21 @@
                         PRIMARY KEY (`num`)
                       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
                   ";
-                  break; 
+                    break; 
+                case 'delete_members':   
+                $query = "CREATE TABLE `delete_members` (
+                    `num` int(11) NOT NULL AUTO_INCREMENT,
+                    `id` char(15) NOT NULL,
+                    `pass` char(15) NOT NULL,
+                    `name` char(10) NOT NULL,
+                    `email` char(80) DEFAULT NULL,
+                    `regist_day` char(20) DEFAULT NULL,
+                    `level` int(11) DEFAULT NULL,
+                    `point` int(11) DEFAULT NULL,
+                    PRIMARY KEY (`num`)
+                    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                ";
+                    break; 
                 default :
                     echo "<script>alert('해당테이블명이 없습니다 . ')</script>";
                     break;
